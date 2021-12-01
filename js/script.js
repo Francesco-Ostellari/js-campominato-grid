@@ -6,30 +6,41 @@ con difficoltà 3 => tra 1 e 49
 Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro. */
 
 
+// prelevo dal DOM il mio button
 const buttonPlay = document.getElementById('play');
 console.log(buttonPlay);
+
+// prelevo dal DOM il container su cui inserire i singoli quadrati
 let containerGrid = document.getElementById('grid');
 console.log(containerGrid);
 
-
+// al click del bottone
 buttonPlay.addEventListener('click', function () {
   grid.innerHTML = '';
+  // prelevo la mia select dal DOM
   const level = document.getElementById('difficolta').value;
   console.log(level);
+  // dichiaro e inizializzo la riga e la colonna che compone i quadrati a 0
   let row = 0;
   let col = 0;
 
-  if (level == 'easy') {
+  // se seleziono il livello easy allora
+  if (level == 'easy') { 
     row = 10;
     col = 10;
+  // se seleziono il livello hard allora 
   } else if (level == 'hard') {
     row = 9;
     col = 9;
+  // se seleziono il livello crazy allora
   } else if (level == 'crazy') {
     row = 7;
     col = 7;
   }
+  // dichiaro la variabile per creare il numero di quadrati
   let numberSquare = row * col;
+
+  // ciclo for per creare i div quadrati
   for (let index = 0; index < numberSquare; index++) {
     const square = document.createElement('div');
     square.classList.add('square');
@@ -38,8 +49,10 @@ buttonPlay.addEventListener('click', function () {
     containerGrid.append(square);
     console.log(square);
 
+    // inserisco i numeri all'interno dei quadrati
     square.append(index + 1);
 
+    // cambio lo sfondo al div quando lo clicco
     square.addEventListener('click', function () {
       this.classList.add('active');
     })
