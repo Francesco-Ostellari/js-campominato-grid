@@ -1,0 +1,58 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* common */
+.flex {
+  display: flex;
+}
+
+body {
+ font-family: 'Roboto', sans-serif;
+}
+/* /common */
+
+header {
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+header .container-left, .container-left img {
+  height: 100%;
+}
+
+header .container-left h1 {
+ margin-left: 10px;
+}
+
+header .container-right {
+  height: 100%;
+}
+
+header .container-right #difficolta {
+  width: 150px;
+  background-color: #E9E9ED;
+  border-radius: 5px;
+}
+
+header .container-right .btn {
+   width: 70px;
+   text-align: center;
+   font-weight: bold;
+   border-radius: 5px;
+}
+
+.main {
+  background-color: #7FFFD4;
+  height: 500px;
+  width: 100%;
+}
+
+footer {
+  height: 80px; 
+  padding: 20px;
+}
