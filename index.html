@@ -13,29 +13,268 @@
   <title>Griglia Campo Minato</title>
 </head>
 <body>
-  <header class="flex">
-    <div class="container-left flex">
-      <img src="img/logo_boolean.png" alt="">
-      <h1>Campo minato: la Griglia</h1>
-    </div>
-    <div class="container-right">
-      <span>Difficolt&agrave;:</span>
-      <select name="difficolta" id="difficolta">
-        <option value="Easy">Easy</option>
-        <option value="Hard">Hard</option>
-        <option value="Crazy">Crazy</option>
-      </select>
-      <button class="btn">Play</button>
-    </div>
-  </header>
+  <div class="container">
+    <header class="flex">
+      <div class="container-left flex">
+        <img src="img/logo_boolean.png" alt="">
+        <h1>Campo minato: la Griglia</h1>
+      </div>
+      <div class="container-right flex">
+        <span class="livello">Difficolt&agrave;:</span>
+        <select name="difficolta" id="difficolta">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+          <option value="crazy">Crazy</option>
+        </select>
+        <button id="play" class="btn"> Play </button>
+      </div>
+    </header>
+  
+    <main class="main flex">
+      <div class="playfield flex" id="grid"></div>
+      <!-- <div id="first-level" class="playfield flex">
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+      </div>
+      <div id="second-level" class="playfield flex">
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+      </div>
+      <div id="third-level" class="playfield flex">
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+        <div class="square flex"></div>
+      </div> -->
 
-  <main class="main">
-
-  </main>
-
-  <footer>
-    <span>Made with &hearts; by <a href="#">Boolean</a></span>
-  </footer>
+    </main>
+  
+    <footer>
+      <span>Made with &hearts; by <a href="#">Boolean</a></span>
+    </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>
